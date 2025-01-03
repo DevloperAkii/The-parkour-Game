@@ -110,7 +110,6 @@ public class VaultingMovement : MonoBehaviour
                             }
                         }
                         StartCoroutine(Parkour(parkourActions[i]));
-
                     }
                     break;
                 }
