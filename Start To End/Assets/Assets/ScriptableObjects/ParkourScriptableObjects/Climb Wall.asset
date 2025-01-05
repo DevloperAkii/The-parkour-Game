@@ -20,5 +20,5 @@ MonoBehaviour:
   obsticalTag: 
   bodyPart: 5
   positionWeight: {x: 0, y: 1, z: 1}
-  startTimeNormalized: 0.08
-  targetTimeNormalized: 0.28
+  startTimeNormalized: 0.06
+  targetTimeNormalized: 0.37

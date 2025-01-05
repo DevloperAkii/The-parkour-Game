@@ -99,7 +99,7 @@ public class VaultingMovement : MonoBehaviour
 
                 if (hitData.objectHeight > parkourActions[i].minDistance && hitData.objectHeight < parkourActions[i].maxDistance)
                 {
-                    if (Input.GetKeyDown(KeyCode.Space) && !aniamtionController.GetAction())
+                    if (!aniamtionController.GetAction())
                     {
                         if (!string.IsNullOrEmpty(parkourActions[i].obsticalTag))
                         {
@@ -109,7 +109,10 @@ public class VaultingMovement : MonoBehaviour
                                 break;
                             }
                         }
-                        StartCoroutine(Parkour(parkourActions[i]));
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            StartCoroutine(Parkour(parkourActions[i]));
+                        }
                     }
                     break;
                 }

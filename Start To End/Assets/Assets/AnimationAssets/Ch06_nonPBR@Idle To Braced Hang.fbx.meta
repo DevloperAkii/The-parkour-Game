@@ -34,8 +34,8 @@ ModelImporter:
       name: Idle To Braced Hang
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 4
-      lastFrame: 38
+      firstFrame: 8
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

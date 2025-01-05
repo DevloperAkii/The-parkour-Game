@@ -61,13 +61,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 CalculatedGravityForce()
     {
         float gravity = 0;
-
         gravity += gravityForce * Time.deltaTime;
         if (Grounded)
         {
             gravity = -0.2f;
         }
-        return new Vector3(0,gravity,0) * Time.deltaTime;
+        return new Vector3(0,gravity,0);
     }
     private Vector3 CalculatedMovementDiraction()
     {
@@ -78,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         diraction.y = 0;
         diraction = diraction.normalized;
 
-        transform.forward += Vector3.Slerp(transform.forward, diraction, smoothTime * Time.deltaTime);
+        transform.forward = Vector3.Slerp(transform.forward, diraction, smoothTime * Time.deltaTime);
         
         return diraction * speed * Time.deltaTime;
     }
